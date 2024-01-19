@@ -9,9 +9,5 @@ steps:
       echo "current location"
       pwd
       ls -ltarh
-      git config --get remote.origin.url
+      _REPO_URL=$(git config --get remote.origin.url)
       echo "Repository URL: $_REPO_URL"
-substitutions:
-  _REPO_URL: ''
-options:
-    dynamicSubstitutions: true
