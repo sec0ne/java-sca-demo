@@ -1,6 +1,8 @@
 steps:
 - name: 'bash'
-  script: |
-    #!/usr/bin/env bash
+  args:
+   - '-c'
+   - |
     echo "GCP Cloud Build - Sec1 Security"
-    echo "$REPO_NAME : $REPO_FULL_NAME : $BRANCH_NAME"
+    REPO_URL=$(git config --get remote.origin.url)
+    echo "Repository URL: $REPO_URL"
