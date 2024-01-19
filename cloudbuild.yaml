@@ -1,8 +1,10 @@
 steps:
-- name: 'bash'
-  args:
-   - '-c'
-   - |
-    echo "GCP Cloud Build - Sec1 Security"
-    REPO_URL1=$(git config --get remote.origin.url)
-    echo "Repository URL: $REPO_URL1"
+  - name: 'bash'
+    args:
+     - '-c'
+     - |
+      echo "GCP Cloud Build - Sec1 Security"
+      REPO_URL=$(git config --get remote.origin.url)
+      echo "Repository URL: $REPO_URL"
+substitutions:
+  REPO_URL: ''
