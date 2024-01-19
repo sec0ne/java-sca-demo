@@ -4,10 +4,5 @@ steps:
     args:
     - '-c'
     - |
-      echo "GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME} : $REPO_FULL_NAME"
-      cd /workspace
-      echo "current location"
-      pwd
-      ls -ltarh
-      _REPO_URL=$(git config --get remote.origin.url)
-      echo "Repository URL: ${_REPO_URL}"
+      echo "GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}"
+      
