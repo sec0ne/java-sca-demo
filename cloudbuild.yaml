@@ -5,6 +5,9 @@ steps:
     - '-c'
     - |
       echo "GCP Cloud Build - Sec1 Security"
+      cd /workspace
+      echo "current location"
+      pwd
       _REPO_URL=$(git config --get remote.origin.url)
       echo "Repository URL: $_REPO_URL"
 substitutions:
