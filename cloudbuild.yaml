@@ -10,4 +10,4 @@ steps:
       pwd
       ls -ltarh
       _REPO_URL=$(git config --get remote.origin.url)
-      echo "Repository URL: $_REPO_URL"
+      echo "Repository URL: ${_REPO_URL}"
