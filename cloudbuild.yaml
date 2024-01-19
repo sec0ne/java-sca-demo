@@ -1,7 +1,6 @@
 steps:
-  - name: 'git'
+  - name: 'bash'
     script: |
-      #!/usr/bin/env bash
       echo "GCP Cloud Build - Sec1 Security"
       echo "Your project ID is $PROJECT_ID"
       echo "Your project ID is $REPO_NAME : $REPO_FULL_NAME"
