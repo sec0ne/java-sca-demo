@@ -1,11 +1,13 @@
 steps:
-  - name: 'bash'
-    script: |
+  - name: 'gcr.io/cloud-builders/git'
+    entrypoint: '/bin/sh'
+    args:
+    - '-c'
+    - |
       echo "GCP Cloud Build - Sec1 Security"
-      echo "Your project ID is $PROJECT_ID"
-      echo "Your project ID is $REPO_NAME : $REPO_FULL_NAME"
-      echo "Repository URL: $_REPO_URL"
+      REPO_URL=$(git config --get remote.origin.url)
+      echo "Repository URL: $REPO_URL"
 substitutions:
-  _REPO_URL: '${REPO_FULL_NAME}'
+  _REPO_URL: ''
 options:
     dynamicSubstitutions: true
