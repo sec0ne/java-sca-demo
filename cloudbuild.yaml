@@ -1,0 +1,6 @@
+steps:
+- name: 'bash'
+  script: |
+    #!/usr/bin/env bash
+    echo "GCP Cloud Build - Sec1 Security"
+    echo '$REPO_NAME : $REPO_FULL_NAME : $BRANCH_NAME'
