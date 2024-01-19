@@ -1,9 +1,10 @@
 steps:
-  - name: 'bash'
-    args:
-     - '-c'
-     - |
+  - name: 'ubuntu'
+    script: |
+      #!/usr/bin/env bash
       echo "GCP Cloud Build - Sec1 Security"
+      echo "Your project ID is $PROJECT_ID"
+      echo "Your project ID is $REPO_NAME : $REPO_FULL_NAME"
       _REPO_URL=$(git config --get remote.origin.url)
       echo "Repository URL: $_REPO_URL"
 substitutions:
