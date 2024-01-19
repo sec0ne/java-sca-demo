@@ -4,7 +4,7 @@ steps:
      - '-c'
      - |
       echo "GCP Cloud Build - Sec1 Security"
-      REPO_URL=$(git config --get remote.origin.url)
-      echo "Repository URL: $REPO_URL"
+      _REPO_URL=$(git config --get remote.origin.url)
+      echo "Repository URL: $_REPO_URL"
 substitutions:
-  REPO_URL: ''
+  _REPO_URL: ''
