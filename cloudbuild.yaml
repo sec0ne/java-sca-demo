@@ -14,7 +14,7 @@ steps:
     - 'INPUT_APIKEY=$$SEC1_API_KEY'
     - 'GCP=true'
     - 'sec1-cli'
-      echo $$SEC1_API_KEY
+      ##echo $$SEC1_API_KEY
       #docker run -e SCAN_DIRECTORY=/workspace -v rsdsec1/test:sec1-foss-security -e INPUT_APIKEY=$$SEC1_API_KEY -e GCP=true sec1-cli
     secretEnv: ['SEC1_API_KEY']
 availableSecrets:
