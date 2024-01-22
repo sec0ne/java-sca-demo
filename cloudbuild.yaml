@@ -5,7 +5,9 @@ steps:
     - '-c'
     - |
       echo "GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}"
-      echo "$${_SECRETS.SEC1_API_KEY}"
+      echo "Secret before: $${_SECRETS.SEC1_API_KEY}"
+      export SECRET_VALUE="$${_SECRETS.SEC1_API_KEY}"
+      echo "Secret after: $SECRET_VALUE"
     secretEnv: ['SEC1_API_KEY']
 availableSecrets:
   secretManager:
