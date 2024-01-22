@@ -9,7 +9,7 @@ steps:
     - 'GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}'
     - '&&'
     - '-e'
-    - 'SCAN_DIRECTORY=/workspace'
+    - 'SEC1_INTEGRATION_NAME=GCP'
     - '-e'
     - 'INPUT_APIKEY=$$SEC1_API_KEY'
     - 'GCP=true'
