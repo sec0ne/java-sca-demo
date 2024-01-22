@@ -4,7 +4,7 @@ steps:
     args:
     - '-c'
     - |
-      echo "${_SECRETS.SEC1_API_KEY}"
+      echo $$SEC1_API_KEY
     secretEnv: ['SEC1_API_KEY']
 availableSecrets:
   secretManager:
