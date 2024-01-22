@@ -1,5 +1,5 @@
 steps:
-  - name: 'ubuntu'
+  - name: 'ubuntu:latest'
     entrypoint: 'bash'
     args:
     - '-c'
