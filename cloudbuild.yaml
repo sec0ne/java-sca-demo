@@ -4,7 +4,7 @@ steps:
     args:
     - 'run'
     - '--rm'
-    - 'rsdsec1/test:sec1-foss-security'
+    - 'rsdsec1/test:sec1-foss-security-v1'
     - 'echo'
     - 'GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}'
     - '&&'
