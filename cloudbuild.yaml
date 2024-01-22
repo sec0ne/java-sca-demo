@@ -1,4 +1,13 @@
 steps:
+  - name: 'bash'
+    entrypoint: '/bin/sh'
+    args:
+    - '-c'
+    - |
+      echo "GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}"
+      ls -ltarh
+      pwd
+      ls -ltarh /workspace
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'docker'
     args:
