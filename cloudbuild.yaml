@@ -1,6 +1,6 @@
 steps:
-  - name: 'bash'
-    entrypoint: '/bin/sh'
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
     args:
     - '-c'
     - |
