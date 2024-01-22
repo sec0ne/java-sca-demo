@@ -1,9 +1,10 @@
 steps:
-  - name: 'bash'
+  - name: 'ubuntu-latest'
     entrypoint: '/bin/sh'
     args:
     - '-c'
     - |
+      echo "GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}"
       echo $$SEC1_API_KEY
     secretEnv: ['SEC1_API_KEY']
 availableSecrets:
