@@ -1,5 +1,5 @@
 steps:
-  - name: 'ubuntu:latest'
+  - name: 'dockerr:latest'
     entrypoint: 'bash'
     args:
     - '-c'
