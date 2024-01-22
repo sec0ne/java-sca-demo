@@ -13,4 +13,5 @@ availableSecrets:
   secretManager:
   - versionName: projects/$PROJECT_ID/secrets/SEC1_API_KEY/versions/latest
     env: 'SEC1_API_KEY'
-      
+substitutions:
+  _SECRETS.SEC1_API_KEY: "$${_SECRETS.SEC1_API_KEY}"
