@@ -3,10 +3,8 @@ steps:
   uses: 'google-github-actions/get-secretmanager-secrets@v0'
   with:
     secrets: |-
-      token:my-project/mysql-password-secret
-
-# Example of using the output
- - id: 'bash'
+      SEC1_API_KEY:$PROJECT_ID/SEC1_API_KEY
+  - id: 'bash'
    entrypoint: '/bin/sh'
    args:
    - '-c'
