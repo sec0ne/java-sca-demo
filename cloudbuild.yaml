@@ -4,9 +4,6 @@ steps:
     args:
     - 'run'
     - '--rm'
-    - 'echo'
-    - 'GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}'
-    - '&&'
     - '-v'
     - '/tmp/resilient-foss-cli:/app/scan-directory'
     - '-e'
