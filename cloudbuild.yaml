@@ -4,16 +4,17 @@ steps:
     args:
     - 'run'
     - '--rm'
-    - 'rsdsec1/test:sec1-foss-security-v1'
     - 'echo'
     - 'GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}'
     - '&&'
+    - '-v'
+    - '/tmp/resilient-foss-cli:/app/scan-directory'
     - '-e'
     - 'SEC1_INTEGRATION_NAME=GCP'
     - '-e'
     - 'INPUT_APIKEY=$$SEC1_API_KEY'
     - 'GCP=true'
-    - 'sec1-cli'
+    - 'rsdsec1/test:sec1-foss-security-v1'
       ##echo $$SEC1_API_KEY
       #docker run -e SCAN_DIRECTORY=/workspace -v rsdsec1/test:sec1-foss-security -e INPUT_APIKEY=$$SEC1_API_KEY -e GCP=true sec1-cli
     secretEnv: ['SEC1_API_KEY']
