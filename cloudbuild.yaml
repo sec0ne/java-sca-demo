@@ -4,7 +4,6 @@ steps:
     args:
     - '-c'
     - |
-      echo "GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}"
       echo "${_SECRETS.SEC1_API_KEY}"
     secretEnv: ['SEC1_API_KEY']
 availableSecrets:
