@@ -5,7 +5,7 @@ steps:
     - '-c'
     - |
       echo "GCP Cloud Build - Sec1 Security ${REPO_FULL_NAME}"
-      docker run -v /workspace:/app/scan-directory -e SOURCE=gcp -e INPUT_APIKEY=$$SEC1_API_KEY -e INPUT_SCANTHRESHOLD='critical=1 high=1' rsdsec1/test:sec1-foss-security-v3
+      docker run -v /workspace:/app/scan-directory -e SOURCE=gcp -e INPUT_APIKEY=$$SEC1_API_KEY -e INPUT_SCANTHRESHOLD='critical=1 high=1' rsdsec1/test:sec1-foss-security-v4
     secretEnv: ['SEC1_API_KEY']
 availableSecrets:
   secretManager:
